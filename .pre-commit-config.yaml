@@ -3,6 +3,6 @@ repos:
     hooks:
       - id: export-requirements
         name: Export requirements
-        entry: bash -c "pip freeze > requirements.txt && git add requirements.txt"
+        entry: ./scripts/export-requirements.sh
         language: system
         stages: [pre-push]
