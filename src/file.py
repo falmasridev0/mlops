@@ -17,3 +17,6 @@ def timelimit(limit:int):
 def uppercase(text):
     return text.upper()
 print(uppercase("hello"))
+
+def new_dummy_fun():
+    pass
