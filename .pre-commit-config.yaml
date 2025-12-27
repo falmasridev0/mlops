@@ -3,6 +3,6 @@ repos:
     hooks:
       - id: export-requirements
         name: Export requirements
-        entry: python -c "import subprocess; subprocess.run(['pip','freeze'], stdout=open('requirements.txt','w'))"
+        entry: python -c "import subprocess; import os; subprocess.run(['pip','freeze'], stdout=open('requirements.txt','w')); os.system('git add requirements.txt')"
         language: system
-        stages: [pre-push]
+        stages: [pre-commit]
