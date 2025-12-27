@@ -1,8 +1,28 @@
+"""
+Module docstring
+"""
 import time
-def timelimit(limit:int):
 
+def timelimit(limit:int):
+    """
+    Docstring for timelimit
+    
+    :param limit: Description
+    :type limit: int
+    """
     def time_it(func):
+        """
+        Docstring for time_it
+        
+        :param func: Description
+        """
         def wrapper(*args,**kwargs):
+            """
+            Docstring for wrapper
+            
+            :param args: Description
+            :param kwargs: Description
+            """
             t1 = time.time()
             result = func(*args,**kwargs)
             time.sleep(1)
@@ -15,8 +35,18 @@ def timelimit(limit:int):
     return time_it
 @timelimit(2)
 def uppercase(text):
+    """
+    Docstring for uppercase
+    
+    :param text: Description
+    """
     return text.upper()
+
+
 print(uppercase("hello"))
 
 def new_dummy_fun():
-    pass
+    """
+    Docstring for new_dummy_fun
+    """
+    print("hello")
