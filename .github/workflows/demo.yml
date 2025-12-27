@@ -1,7 +1,11 @@
 name: GitHub Actions Example
-on: [push]		
+on: 
+  [push,pull_request]		
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
+      - run: pip install -r requirements.txt
       - run: pytest
